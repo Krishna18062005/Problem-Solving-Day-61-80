@@ -27,3 +27,32 @@ public class Hello {
 
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Employee Break Timing:
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int[] st=new int[n];
+		int[] en=new int[n];
+		int id=0;
+		int in=0;
+		for(int i=0;i<n+n;i++){
+		    String[] ip=sc.next().split(":");
+		    int tm=Integer.parseInt(ip[0])*60+Integer.parseInt(ip[1]);
+		    if(i%2==0) st[id++]=tm;
+		    else en[in++]=tm;
+		}
+		int s=0;
+		for(int i=1;i<n;i++){
+		    s+=(st[i]-en[i-1]);
+		}
+		if(s/60!=1)
+		System.out.print(s/60+" Hours "+s%60+" Minutes");
+		else{
+		    System.out.print("1 Hour "+s%60+" Minutes");
+		}
+ 
+	}
+}
