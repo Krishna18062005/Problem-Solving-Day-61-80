@@ -58,3 +58,28 @@ public class Hello {
 
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Binary Pattern
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		for(int i=1;i<=a;i++){
+		    int po=(int)Math.pow(2,i);
+		    for(int j=0;j<po;j++){
+		        System.out.println(form(Integer.toBinaryString(j),i));
+		    }
+		}
+
+	}
+	public static String form(String a,int i){
+	    String ans="";
+	    int n=i-a.length();
+	    for(int j=0;j<n;j++){
+	        ans+='0';
+	    }
+	    ans+=a;
+	    return ans;
+	}
+}
