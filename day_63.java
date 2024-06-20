@@ -80,6 +80,6 @@ public class Hello {
 	        ans+='0';
 	    }
 	    ans+=a;
-	    return ans;
+	    return ans.replace(""," ");
 	}
 }
