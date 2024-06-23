@@ -34,3 +34,36 @@ public class Hello {
 	    
 	}
 }
+//this code tells about the equalsIgnoreCase: it is in C programming
+// #include<stdio.h>
+// #include<stdlib.h>
+// #include<string.h>
+// int cmp(char* a,char* b){
+//     if(strlen(a)!=strlen(b)) return 1;
+//     else{
+//         for(int i=0;i<strlen(a);i++){
+//             if(a[i]!=b[i]) return 1;
+//         }
+//     }
+//     return 0;
+// }
+// int main()
+// {
+
+// char a[1001],b[1001];
+// scanf("%s %s",a,b);
+// for(int i=0;i<strlen(a);i++){
+//     if(a[i]>=97){
+//         a[i]-=32;
+//     }
+// }
+// for(int i=0;i<strlen(b);i++){
+//     if(b[i]>=97){
+//         b[i]-=32;
+//     }
+// }
+// if(cmp(a,b)==0)
+// printf("YES");
+// else
+// printf("NO");
+// }
