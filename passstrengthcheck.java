@@ -74,3 +74,44 @@ public class Hello {
 
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Sort Factors;
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		ArrayList<Integer> fa=new ArrayList<>();
+		ArrayList<Integer> fc=new ArrayList<>();
+		Hello ello=new Hello();
+		for(int i=1;i<=num;i++){
+		    if(num%i==0){
+		        fa.add(i);
+		        fc.add(ello.co(i));
+		    }
+		}
+		ello.sort(fa,fc);
+		for(int i=0;i<fa.size();i++)
+		System.out.print(fa.get(i)+" ");
+
+	}
+  int co(int a){
+      int c=2;
+      for(int i=2;i<a;i++) if(a%i==0) c++;
+      return c;
+  } 
+  void sort(ArrayList<Integer> a,ArrayList<Integer> b){
+      for(int i=0;i<a.size();i++){
+          for(int j=i+1;j<a.size();j++){
+              if(b.get(i)<=b.get(j)){
+                  int tm=a.get(i);
+                  a.set(i,a.get(j));
+                  a.set((j),tm);
+                  int tp=b.get(i);
+                  b.set(i,b.get(j));
+                  b.set(j,tp);
+              }
+          }
+      }
+  } 
+}
