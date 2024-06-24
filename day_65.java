@@ -14,7 +14,7 @@ public class Hello {
 		        System.out.print(i+" ");
 		    }
 		}
-
+ 
 	}
 	static boolean count(String a){
 	    int c=0;
