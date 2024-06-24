@@ -46,3 +46,31 @@ public class passstrengthcheck {
 
     }
 }
+
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//N columns Pattern
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int[] ar=new int[a];
+		for(int i=0;i<a;i++){
+		    ar[i]=sc.nextInt();
+		}
+		int cp=0;
+		for(int i=0;i<a;i++){
+		    int c=0;
+		    while(c<ar[i]){
+		        System.out.print(ar[i]+" ");
+		        c++;
+		        cp++;
+		        if(cp==a){
+		            cp=0;
+		            System.out.println();
+		        }
+		    }
+		}
+
+	}
+}
