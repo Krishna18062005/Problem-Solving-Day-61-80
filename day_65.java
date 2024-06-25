@@ -67,3 +67,34 @@ public class Hello {
 // else
 // printf("NO");
 // }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//U -Shaped Layers Matrix
+		Scanner sc=new Scanner(System.in);
+		int r=sc.nextInt();
+		int c=sc.nextInt();
+		int ar[][]=new int[r][c];
+		for(int i=0;i<r;i++){
+		    for(int j=0;j<c;j++){
+		        ar[i][j]=sc.nextInt();
+		    }
+		}
+		for(int i=0;i<c/2;i++){
+		    for(int j=0;j<r-i-1;j++){
+		        System.out.print(ar[j][i]+" ");
+		    }
+		    for(int k=i;k<c-i-1;k++){
+		        System.out.print(ar[r-i-1][k]+" ");
+		    }
+		    for(int l=r-i-1;l>=0;l--){
+		        System.out.print(ar[l][c-i-1]+" ");
+		    }
+		    
+		    System.out.println();
+		}
+		
+    
+	}
+}
