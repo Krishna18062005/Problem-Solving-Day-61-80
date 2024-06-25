@@ -67,6 +67,7 @@ public class Hello {
 // else
 // printf("NO");
 // }
+
 import java.util.*;
 public class Hello {
 
@@ -81,14 +82,15 @@ public class Hello {
 		        ar[i][j]=sc.nextInt();
 		    }
 		}
-		for(int i=0;i<c/2;i++){
+		for(int i=0;i<Math.min(c/2,r);i++){
 		    for(int j=0;j<r-i-1;j++){
 		        System.out.print(ar[j][i]+" ");
 		    }
-		    for(int k=i;k<c-i-1;k++){
+		    
+		    for(int k=i;k<c-i;k++){
 		        System.out.print(ar[r-i-1][k]+" ");
 		    }
-		    for(int l=r-i-1;l>=0;l--){
+		    for(int l=r-i-2;l>=0;l--){
 		        System.out.print(ar[l][c-i-1]+" ");
 		    }
 		    
