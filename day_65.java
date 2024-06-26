@@ -119,3 +119,39 @@ public class Hello {
 
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Order by Integers;
+		Scanner sc=new Scanner(System.in);
+		int as=sc.nextInt();
+		int is=sc.nextInt();
+		ArrayList<Integer> a=new ArrayList<>();
+		ArrayList<Integer> I =new ArrayList<>();
+		
+		for(int i=0;i<as;i++) a.add(sc.nextInt());
+		for(int i=0;i<is;i++) I.add(sc.nextInt());
+	//	System.out.print(I);
+		int ans[]=new int[as];
+		int j=0;
+		int id=0;
+		while(j<is){
+		    for(int i=0;i<a.size();i++){
+		        if((int)a.get(i)==(int)I.get(j)){
+		        ans[id++]=I.get(j);
+		       
+		        }
+		    }
+		    while(a.contains(I.get(j)))
+		    a.remove(I.get(j));
+		    j++;
+		}
+        Collections.sort(a);
+		for(int i=0;i<a.size();i++)
+		ans[id++]=a.get(i);
+		for(int i:ans)
+		System.out.print(i+" ");
+
+	}
+}
