@@ -100,3 +100,22 @@ public class Hello {
     
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+        //longest prefix divisible by D;
+		Scanner sc=new Scanner(System.in);
+		String ip=sc.next();
+		int d=sc.nextInt();
+		for(int i=ip.length()-1;i>=0;i--){
+		    int num=Integer.parseInt(ip.substring(0,i+1));
+		    if(num%d==0){
+		        System.out.print(num);
+		        return;
+		    }
+		}
+		System.out.print(-1);
+
+	}
+}
