@@ -17,3 +17,22 @@ public class Hello {
 
 	}
 }
+// #include<stdio.h>
+// #include<stdlib.h>
+
+// int main()
+// {
+//     int a;
+//     scanf("%d",&a);
+//     int ar[a];
+//     for(int i=0;i<a;i++) scanf("%d",&ar[i]);
+//     for(int i=a-1;i>=0;i--){
+//         int r=ar[i]%10;
+//         if(r==0){
+//         if(ar[i]!=0)
+//         printf("%d ",ar[i]);
+//         }
+//         else if(ar[i]%r==0) 
+//         printf("%d ",ar[i]);
+//     }
+// }-->divisible by its unit digit
