@@ -39,3 +39,26 @@ public class Hello {
 	    return "Yes";
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Pairs-Divisible by 5
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		ArrayList<Integer> se=new ArrayList<>();
+		for(int i=1;i<=b;i++) se.add(i);
+		int c=0;
+		for(int i=1;i<=a;i++){
+		    for(int j=0;j<se.size();j++){
+		        if((i+se.get(j))%5==0){
+		        c++;
+		        se.remove(j);
+				break;
+		    }}
+		}
+		System.out.print(c);
+
+	}
+}
