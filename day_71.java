@@ -42,3 +42,32 @@ public class Hello {
 	    for(String i:set)System.out.print(i+" ");
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Count N integers in M integers
+		Scanner sc=new Scanner(System.in);
+		int f=sc.nextInt();
+		int s=sc.nextInt();
+		int[] fa=new int[f];
+		int[] sa=new int[s];
+		for(int i=0;i<f;i++) fa[i]=sc.nextInt();
+		for(int i=0;i<s;i++) sa[i]=sc.nextInt();
+		
+		Arrays.sort(sa);
+		int i=0;
+		int j=0;
+		int c=0;
+		while(j<s&&i<f){
+		    if(fa[i]==sa[j]){
+		        c++;
+		        j++;
+		    }
+		    else if(fa[i]<sa[j]) i++;
+		    else j++;
+		}
+		System.out.print(c);
+
+	}
+}
