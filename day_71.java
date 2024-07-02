@@ -27,17 +27,18 @@ public class Hello {
 		String[] fs=sc.nextLine().split(" ");
 		String[] ls=sc.nextLine().split(" ");
 		int k=sc.nextInt();
-	
-	for(String i:fs){
-	    if(i.length()!=k) continue;
-	    for(String j:ls){
-	        if(j.length()!=k) continue;
-	        if(i.equals(j)){
-	            System.out.print(j+" ");
-	            break;
+		LinkedHashSet<String> set=new LinkedHashSet<>();
+	    for(String i:fs){
+	        if(i.length()!=k) continue;
+	        for(String j:ls){
+	            if(j.length()!=k) continue;
+	            if(i.equals(j)) {
+	                set.add(i);
+	                break;
+	            }
 	        }
 	    }
-	}
-
+	    if(set.isEmpty()){ System.out.print(-1);return;}
+	    for(String i:set)System.out.print(i+" ");
 	}
 }
