@@ -71,3 +71,21 @@ public class Hello {
 
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Insert Word In Lexicographical order
+		Scanner sc=new Scanner(System.in);
+		ArrayList<String> ip=new ArrayList<>();
+		while(sc.hasNext()){
+		    ip.add(sc.next());
+		}
+		Collections.sort(ip);
+		for(String i: ip){
+		    System.out.print(i+" ");
+		}
+		
+
+	}
+}
