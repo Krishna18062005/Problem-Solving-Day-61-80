@@ -160,12 +160,10 @@ public class Hello {
 		for(int i=0;i<k;i++){
 		    s+=arr[i];
 		}
-		
+	        mid=max=s;
+		minIndex=maxIndex=k-1;
 		for(int i=k;i<a;i++){
-		    if(i==k){
-		        mid=max=s;
-		        minIndex=maxIndex=k-1;
-		    }
+		    
 		    s+=arr[i]-arr[i-k];
 		    if(s>max){
 		        max=s;
