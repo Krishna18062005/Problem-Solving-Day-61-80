@@ -115,3 +115,30 @@ public class Hello {
       }
   } 
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Matrix Palindrome
+		Scanner sc=new Scanner(System.in);
+		int r=sc.nextInt();
+		int c=sc.nextInt();
+		int[][] ar=new int[r][c];
+		for(int i=0;i<r;i++){
+		    for(int j=0;j<c;j++){
+		        ar[i][j]=sc.nextInt();
+		    }
+		}
+		System.out.print((check(ar,r,c))?"YES":"NO");
+
+	}
+	static boolean check(int[][] arr,int r,int c){
+	    for(int i=0;i<r;i++) for(int j=0;j<c/2;j++)	
+	    if(arr[i][j]!=arr[i][c-j-1]) return false;
+	    
+	    for(int i=0;i<c;i++) for(int j=0;j<r/2;j++)
+	    if(arr[j][i]!=arr[r-j-1][i]) return false;
+	    
+	    return true;
+	}
+}
