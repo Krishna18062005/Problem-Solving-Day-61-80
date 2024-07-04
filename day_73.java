@@ -142,3 +142,47 @@ public class Hello {
 	    return true;
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Subarrays-Mininum and Maximum Sum
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int[] arr=new int[a];
+		for(int i=0;i<a;i++) arr[i]=sc.nextInt();
+		int k=sc.nextInt();
+		int mid=-1;
+		int max=0;
+		int s=0;
+		int minIndex=0;
+		int maxIndex=0;
+		for(int i=0;i<k;i++){
+		    s+=arr[i];
+		}
+		
+		for(int i=k;i<a;i++){
+		    if(i==k){
+		        mid=max=s;
+		        minIndex=maxIndex=k-1;
+		    }
+		    s+=arr[i]-arr[i-k];
+		    if(s>max){
+		        max=s;
+		        maxIndex=i;
+		    }
+		    if(s<mid){
+		        mid=s;
+		        minIndex=i;
+		    }
+		}
+	//	System.out.println(minIndex+" "+maxIndex);
+		for(int i=minIndex-k+1;i<minIndex+1;i++){
+		    System.out.print(arr[i]+" ");
+		}
+		System.out.println();
+		for(int i=maxIndex-k+1;i<maxIndex+1;i++)
+		System.out.print(arr[i]+" ");
+
+	}
+}
