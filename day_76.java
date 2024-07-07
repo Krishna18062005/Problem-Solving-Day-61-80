@@ -130,4 +130,33 @@ class Solution {
         }
         return true;
     }
+
+
+
+ import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Super Market -Available Products
+		Scanner sc=new Scanner(System.in);
+		int f=sc.nextInt();
+		int s=sc.nextInt();
+		int[] ar=new int[f];
+		int[] ar2=new int[s];
+		for(int i=0;i<f;i++){
+		    ar[i]=sc.nextInt();
+		}
+		for(int i=0;i<s;i++){
+		    ar2[i]=sc.nextInt();
+		}
+		for(int i=0;i<f;i++){
+		    for(int j=0;j<s;j++){
+		        if(ar[i]==ar2[j]){
+		            System.out.print(ar[i]+" ");break;
+		        }
+		    }
+		}
+
+	}
+}
 }
