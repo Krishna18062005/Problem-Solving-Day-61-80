@@ -24,3 +24,39 @@ public class Hello {
 	}
 	
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Words Alternate Min&Max
+		String[] str=new Scanner(System.in).nextLine().split(" ");
+		int i=0;
+		String rs="";
+		int j=str.length-1;
+		while(i<j){
+		    String ans="";
+		    if(str[i].length()==str[j].length()){
+		        rs+=(str[i]+" "+str[j]+" ");
+		        i++;j--;
+		        continue;
+		    }
+		    else if(str[i].length()<str[j].length()){
+		        if(i%2==0){
+		            ans=str[i];
+		        }
+		        else ans=str[j];
+		    }
+		    else if(str[i].length()>str[j].length()){
+		        if(i%2==0){
+		            ans=str[j];
+		        }
+		        else ans=str[i];
+		    }
+		    rs+=(ans+" ");
+		    j--;
+		    i++;
+		}
+		System.out.print(rs.trim());
+
+	}
+}
