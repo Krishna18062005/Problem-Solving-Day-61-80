@@ -19,3 +19,30 @@ public class Hello {
 
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Probablitity N Balls
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		int c=sc.nextInt();
+		int d=Math.min(a,c);
+		int i=d;
+		int j=0;
+		while(i>=0&&j<=b){
+		    if(i+j==c){
+		        System.out.println(i+" "+j);
+		        i--;
+		        j=0;
+		    }
+		    
+		    
+		    if(j==b){
+		        i=d;
+		    }j++;
+		}
+
+	}
+}
