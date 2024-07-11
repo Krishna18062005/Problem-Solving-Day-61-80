@@ -113,3 +113,48 @@ class Solution {
         return str.toString();
     }
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Replace - Four Directions
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		String mat[][]=new String[a][b];
+		for(int i=0;i<a;i++) for(int j=0;j<b;j++) mat[i][j]=sc.next();
+		String c=sc.next();
+		int iind=0;
+		int jind=0;
+		for(int i=0;i<a;i++) for(int j=0;j<b;j++) if(c.equals(mat[i][j])){ iind=i;jind=j;
+		}
+		int ii=iind;
+		int ji=jind;
+		while(ii>=0&&ji>=0){
+		    mat[ii--][ji--]="*";
+		    
+		}
+		ii=iind;
+		ji=jind;
+		while(ii>=0&&ji<b){
+		    mat[ii--][ji++]="*";
+		}
+		ii=iind;
+		ji=jind;
+		while(ii<a&&ji>=0){
+		    mat[ii++][ji--]="*";
+		}
+		ii=iind;
+		ji=jind;
+		while(ii<a&&ji<b){
+		    mat[ii++][ji++]="*";
+		}
+		for(int i=0;i<a;i++){
+		    for(int j=0;j<b;j++){
+		      
+		        System.out.print(mat[i][j]+" ");
+		    }
+		    System.out.println("");
+		}
+	}
+}
